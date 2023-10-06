@@ -1,0 +1,118 @@
+html,
+body {
+	margin: 40;
+	padding: 0;
+}
+
+canvas {
+	display: block;
+}
+
+* {
+	margin: 0;
+
+	padding: 0;
+
+	color: #0E249C;
+}
+
+body {
+	background-color: #E7E7E7;
+
+	min-height: 100vh;
+}
+
+.container {
+	width: 1000px;
+
+	margin: 50px auto 100px;
+}
+
+.info {
+	width: 100%;
+
+	display: -webkit-box;
+
+	display: -ms-flexbox;
+
+	display: flex;
+
+	-webkit-box-align: start;
+
+	-ms-flex-align: start;
+
+	align-items: flex-start;
+
+	-webkit-box-pack: justify;
+
+	-ms-flex-pack: justify;
+
+	justify-content: space-between;
+
+	margin-bottom: 60px;
+}
+
+.title {
+	width: 50%;
+
+	color: white;
+
+	font-family: "Yeseva One", cursive;
+	/*   font-family: 'Abril Fatface', cursive; */
+
+	font-size: 140px;
+
+	/* 	position: relative; */
+	/*   position */
+
+	top: -20px;
+}
+
+.about {
+	width: 50%;
+
+	text-align: left;
+}
+
+.desc {
+	text-align: left;
+
+	font-weight: 300;
+
+	font-size: 20px;
+
+	line-height: 1.6em;
+
+	margin-bottom: 10px;
+	font-family: 'Noto Sans TC', sans-serif;
+	font-weight: 400;
+}
+
+/* .input{ */
+
+/* 輸入框 */
+input[type="text"] {
+	padding: 10px;
+	font-size: 16px;
+	background-color: #E7E7E7;
+
+	border: 2px solid #ccc;
+	border-radius: 5px;
+}
+
+/* 按鈕 */
+button {
+	padding: 10px 20px;
+	font-size: 16px;
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+/* 調整輸出區域 */
+#output {
+	margin-top: 20px;
+}
+
