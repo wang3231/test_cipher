@@ -9,10 +9,6 @@ function setup() {
 
 }
 
-// function mousePressed(){
-// 	generateImage
-// }
-
 function draw() {}
 
 function generateImage() {
@@ -26,27 +22,46 @@ function generateImage() {
   // create a p5.js canvas
   const canvas = createCanvas(windowWidth, windowHeight);
   canvas.parent(output);
-  // 清空畫布
-  background("#E7E7E7");
+  clear();
 
   // 設置圖案生成初始的位置
-  let x = width / 2;
-  // let x = 40;
-  const y = height / 2;
-  //textSize(32);
+  let x = width / 2-200;
+  let y = height / 2;
+
 
   for (let i = 0; i < inputText.length; i++) {
-    const letter = inputText.charAt(i).toUpperCase();
-    // 將字母轉換成大寫
-
-    // 檢查字母是否在對照表中
-    if (sizeMap.hasOwnProperty(letter)) {
-      const size = sizeMap[letter];
-      ellipse(x, y, size * 10, size * 10);
-      // 根據對照表產生圖案
-
-      x += size * 12;
-      // 更新水平位置圖案不會疊在一起
+    const letteri = inputText.charAt(i).toUpperCase();
+    
+      if (sizeMap.hasOwnProperty(letteri)) {
+      const sizei = sizeMap[letteri];
+      
+      strokeWeight(4)
+      ellipse(x, y, 6);
+        
+        if((sizei%4) === 1){
+          
+              line(x,y,x+(sizei/4+1) * 10,y);
+      x += (sizei/4+1) * 10; 
+          
+        }else if((sizei%4) === 2){
+          
+              line(x,y,x,y-(sizei/4+1)  * 10);
+      y -= (sizei/4+1) * 10; 
+          
+        }else if((sizei%4) === 3){
+          
+              line(x,y,x-(sizei/4+1)  * 10,y);
+      x -= (sizei/4+1) * 10; 
+          
+        }else if((sizei%4) === 0){
+          
+              line(x,y,x,y+(sizei/4+1)  * 10);
+      y += (sizei/4+1) * 10; 
+          
+        }
+             
     }
   }
+  
+ 
 }
